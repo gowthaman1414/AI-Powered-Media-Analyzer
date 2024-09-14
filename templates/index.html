@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ease Accessable AI</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;      
+            /* background: url('{{ url_for('static', filename='bg.jpg') }}') no-repeat center center fixed; */
+            font-size: large;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .option {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 150px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .option:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ease Accessable AI</h1>
+        <div class="options">
+            <a href="{{ url_for('summarize_page') }}" class="option">Summarize Text</a>
+            <a href="{{ url_for('upload_image_page') }}" class="option">Upload Image</a>
+            <a href="{{ url_for('upload_audio_page') }}" class="option">Upload Audio</a>
+            <a href="{{ url_for('upload_video_page') }}" class="option">Upload Video</a>
+        </div>
+    </div>
+</body>
+</html>
